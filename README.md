@@ -4,7 +4,7 @@
 
 Python REST API using Flask and MySQL. You can find how to create a web application CRUD example using Python, Flak and MySQL in this repository.
 
-What is REST or REST?
+What is REST or RESTful?
 
 A RESTful API is an application program interface (API) that uses HTTP requests to GET, PUT, POST and DELETE data. An API for a website is code that allows two software programs to communicate with each other.
 
