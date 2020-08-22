@@ -3,7 +3,10 @@ from app import app
 from db_config import mysql
 from flask import jsonify
 from flask import flash, request
-		
+
+
+""" Post method to add new student """
+
 @app.route('/add', methods=['POST'])
 def add_user():
 	try:
@@ -30,7 +33,9 @@ def add_user():
 	finally:
 		cursor.close() 
 		conn.close()
-		
+
+""" Get method to get the student list from database """
+
 @app.route('/users', methods=['GET'])
 def users():
 	try:
@@ -47,7 +52,9 @@ def users():
 	finally:
 		cursor.close() 
 		conn.close()
-		
+
+""" use GET method to get single student details by ID"""
+
 @app.route('/user/<int:id>')
 def user(id):
 	try:
@@ -64,6 +71,8 @@ def user(id):
 	finally:
 		cursor.close() 
 		conn.close()
+
+""" PUT method to add a new student to database """
 
 @app.route('/update', methods=['PUT'])
 def update_user():
@@ -92,7 +101,9 @@ def update_user():
 	finally:
 		cursor.close() 
 		conn.close()
-		
+
+""" DETETE method to delete student from database by ID """
+
 @app.route('/delete/<int:id>', methods=['DELETE'])
 def delete_user(id):
 	try:
@@ -123,6 +134,7 @@ def not_found(error=None):
 
     return resp
 
-#run flask instance on port 5000		
+""" run flask instance on port 5000	"""
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000)
