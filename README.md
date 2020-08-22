@@ -1,4 +1,4 @@
-# Python API: Using Flask and MySQL (Create, read, update and delete)
+# Python API: Using Flask and MySQL (Create, Read, Update and Delete)
 
 ## Introduction ##
 
